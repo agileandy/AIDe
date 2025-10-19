@@ -1,63 +1,48 @@
-Build me foundational ai agentic coding prompts based around the following principles.
+# 🏗️ Agentic Coding Meta-Prompt
 
-# AI Coding Agent: Principles & Actions
-## Core Principles
-### Think Like a Human Developer
-* Maintain persistent state and shared understanding across interactions
-* Apply professional engineering practices consistently
-* Follow structured workflows: Plan → Do → Check → Act
-* Develop defensively and incrementally
-* Learn and adapt from project-specific context
-* Embrace Model Context Protocol (MCP) for tool integration
-## Team Structure
-### Define Clear Roles
-* Team Lead: Project oversight and coordination
-* Architect: System design and technical decisions
-* Developer: Implementation and coding
-* Test Engineer: Quality assurance and validation
-## Essential Artifacts
-### Three Living Documents
-1. projectOverview.md - The single source of truth
-   * Captures goals and user needs
-   * Documents requirements and scope
-   * Incorporates feedback for continuous improvement
-2. systemDesign.md - Technical foundation
-   * Details architecture and design patterns
-   * Records key technical decisions
-   * Includes setup and troubleshooting guidance
-3. activeDevelopment.md - Progress tracking
-   * Logs current status and active tasks
-   * Captures recent progress and next steps
-   * Serves as dynamic development log
-## Version Control Practices
-### Git & GitHub Fundamentals
-* Learn basic commands and principles
-* Commit regularly and atomically
-* Don't be afraid to go backwards (revert when needed)
-* Use branches for feature development
-* Write clear, descriptive commit messages
-## Engineering Practices
-### Apply industry-standard approaches:
-* Version control for all changes
-* Code reviews before integration
-* Defensive programming techniques
-* Design patterns for maintainability
-* Refactoring for code quality
-* Atomic commits for clarity
-* Trunk-based development workflow
-* Continuous delivery mindset
-* Test-driven development
-* Clean code principles
-* SOLID principles for design
-* DRY principle to avoid repetition
-* YAGNI principle for simplicity
-* Logging and monitoring
-* Requirements engineering
-### Workflow Actions
-1. Always start by reading/updating the three core artifacts
-2. Plan before coding - outline approach and implications
-3. Develop incrementally - small, testable changes
-4. Check your work - validate against requirements
-5. Act on feedback - update artifacts and adjust approach
-6. Commit frequently - maintain clear development history
-7. Document decisions - record rationale in appropriate artifact
+## Task:
+Build a foundational AI agentic coding system with clearly defined roles, artifacts, and workflows that follow professional software engineering standards.
+
+## Deliverables:
+	1.	A complete set of foundational agent prompts for four core roles:
+	•	Team Lead (oversight, PDCA coordination)
+	•	Architect (C4 design model)
+	•	Developer (implementation under TDD)
+	•	Test Engineer (test-first and quality gate)
+	2.	A Mermaid diagram visualizing the workflow for human navigation and artifact flow.
+	3.	A continuous guidance model describing:
+	•	How the agent explains the intent of each step
+	•	How progress updates are shared
+	•	How success completion and next-step recommendations are communicated
+	4.	Integration with three living documents (projectOverview.md, systemDesign.md, activeDevelopment.md) as persistent knowledge and version-controlled artifacts.
+
+## Required Principles:
+	•	Think like a professional human developer
+	•	Maintain persistent context across turns (via the three artifacts)
+	•	Follow Plan → Do → Check → Act as a structured workflow
+	•	Apply Test-Driven Development (TDD) end-to-end
+	•	Apply the C4 Model (Concept → Containers → Components → Code) for design clarity
+	•	Enforce modern software engineering practices:
+	•	Version control with atomic commits and branches
+	•	Code reviews before integration
+	•	Clean Code, SOLID, DRY, and YAGNI principles
+	•	Continuous delivery mindset
+	•	Defensive programming and logging
+	•	Requirements traceability
+	•	Use Model Context Protocol (MCP) references for tool integration when applicable
+
+## Workflow Actions:
+	1.	Begin every cycle by reviewing or updating the three artifacts.
+	2.	Plan → Design → Test → Implement → Validate → Refactor → Document.
+	3.	Ensure each cycle produces testable, validated, documented increments.
+	4.	Provide continuous guidance and completion summaries to the human collaborator.
+
+## Output Format:
+	•	Role-based prompt sections (Team Lead / Architect / Developer / Test Engineer)
+	•	Continuous guidance template
+	•	Mermaid workflow diagram
+	•	Short explanatory notes on artifact updates and PDCA loops
+
+## Tone: 
+Structured, instructional, professional—suitable for seeding an AI multi-agent coding environment.
+
