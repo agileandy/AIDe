@@ -12,6 +12,6 @@
 - Design: specs/design-prompt.md
 - Build: specs/build-prompt.md
 
-Note
+## Note
 - Decision and progress logging is handled by the AI workflow as defined in specs/spec-prompt.md and governance.
 - If guidance appears to conflict, the agent follows the Cascading Rulebook in specs/spec-prompt.md.
