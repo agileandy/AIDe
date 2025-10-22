@@ -7,39 +7,50 @@ Everything after Project Context is primarily for the AI to read and follow.
 # You fill this section first
 
 <Name>
+Hint: Short, descriptive project title (e.g., "Customer Support Triage Bot").
 
 </Name>
 
 <Objective>
+Hint: 1–3 sentences explaining the outcome to achieve and why it matters. Include the core user value and any non-goals.
 
 </Objective>
 
 <Context>
-- Editable files:
-- Programming language(s):
-- Non-functional constraints:
-- Integrations and external systems:
+Hint: Describe the working materials and constraints the agent must respect.
+- Editable files: List files/folders the agent is allowed to modify (e.g., src/, tests/, pyproject.toml).
+- Programming language(s): Primary languages and versions (e.g., Python 3.12, TypeScript 5).
+- Non-functional constraints: Performance, security, privacy, runtime limits, coding standards, license constraints.
+- Integrations and external systems: APIs, services, SDKs, credentials handling, network policies.
 </Context>
 
 <Stakeholders>
-- Primary stakeholders:
-- Reviewers / approvers:
+Hint: Who cares and who approves?
+- Primary stakeholders: Roles/people impacted (e.g., Support Ops, Product Manager).
+- Reviewers / approvers: Who must sign off (e.g., Tech Lead, QA Lead).
 </Stakeholders>
 
 <SuccessMetrics>
-- Quantitative metrics:
-- Qualitative outcomes:
+Hint: How we’ll know this worked.
+- Quantitative metrics: Concrete targets (e.g., 
+  - ">=95%" test pass rate,
+  - "<200ms" p95 latency,
+  - "-20%" manual triage time).
+- Qualitative outcomes: Developer/UX experience goals (e.g., easier onboarding, clearer logs).
 </SuccessMetrics>
 
 <AcceptanceCriteriaSummary>
-- High-level criteria (full details live in specs/context/projectContext.md):
+Hint: Bullet the must-haves to accept the work. Keep it short; full detail should live in specs/context/projectContext.md.
+- Example: "CLI accepts --input and --output flags and validates paths."
+- Example: "Errors are logged with correlation IDs."
 </AcceptanceCriteriaSummary>
 
 <Tasks>
-1. Task 1:
-2. Task 2:
-3. Task 3:
-4. Task 4:
+Hint: Break work into clear, verifiable steps. Prefer small, testable increments. Reference acceptance criteria where relevant.
+1. Task 1: What to build/do and why (DoD: unit tests passing; docs updated)
+2. Task 2: ...
+3. Task 3: ...
+4. Task 4: ...
 *(End of tasks)*
 </Tasks>
 </ProjectContext>
