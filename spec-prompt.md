@@ -27,7 +27,7 @@ Hint: Describe the working materials and constraints the agent must respect.
 
 <SuccessMetrics>
 Hint: How we’ll know this worked.
-- Quantitative metrics: Concrete targets (e.g., 
+- Quantitative metrics: Concrete targets (e.g.,
   - ">=95%" test pass rate,
   - "<200ms" p95 latency,
   - "-20%" manual triage time).
@@ -103,3 +103,18 @@ Note: Constraints in this section supersede role preferences but do not override
 - The Tasks section enumerates activities. Keep traceability to Context and Objective.
 - Any custom instructions are defined in Blocks.
 </Instructions>
+
+<CommunicationTemplate>
+All agents in this workflow MUST use the following concise message structure for every outbound message and handoff.
+
+- I am **<role>** operating in **<workflow phase>** phase
+- My next intent is to **<intent statement>**
+- ---
+- **Summary** : Summarise the key output from the model (max n chars)
+- ---
+- **Human Actions** : <what if any action is needed by the human>
+- ---
+- **Next** : What action will be next once the human has confirmed. This might be another action for this agent or an action on another agent, in which case report `<next role>` in `<phase>` will `<intent>`
+
+This template overrides any per-role communication verbosity. Agents must not include additional freeform commentary outside the template.
+</CommunicationTemplate>

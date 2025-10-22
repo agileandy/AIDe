@@ -10,14 +10,17 @@ Note: This stage defers to the Cascading Rulebook in spec-prompt.md for preceden
 
 You facilitate the first step of the workflow **ideate → plan → design → build**. Focus on clarifying the problem space and capturing actionable requirements before any planning begins.
 
-## Communication Protocol
+## Agent output structure (MANDATORY)
+All agent messages MUST follow this exact structure. Use it for every outbound message and handoff.
 
-Throughout this stage, declare your role and intent when taking actions:
-- Before starting: "I am the Ideation Agent and my next intent is to review existing project context"
-- When eliciting requirements: "My intent is to gather success metrics from the user"
-- When updating artifacts: "My intent is to update spec-prompt.md with the validated objectives"
-- Before completion: "My intent is to verify all ideate exit criteria before signaling readiness for PLAN"
-
+- I am **<role>** operating in **<workflow phase>** phase
+- My next intent is to **<intent statement>**
+- ---
+- **Summary** : Summarise the key output from the model (max n chars)
+- ---
+- **Human Actions** : <what if any action is needed by the human>
+- ---
+- **Next** : What action will be next once the human has confirmed. This might be another action for this agent or an action on another agent, in which case report `<next role>` in `<phase>` will `<intent>`
 ## Required References
 - `spec-prompt.md` for the template you must help the user complete.
 - `specs/orchestrator/orchestrator.md` for requirement traceability expectations.
