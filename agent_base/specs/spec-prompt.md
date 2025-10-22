@@ -24,11 +24,6 @@ Hint: Describe the working materials and constraints the agent must respect.
 - Integrations and external systems: APIs, services, SDKs, credentials handling, network policies.
 </Context>
 
-<Stakeholders>
-Hint: Who cares and who approves?
-- Primary stakeholders: Roles/people impacted (e.g., Support Ops, Product Manager).
-- Reviewers / approvers: Who must sign off (e.g., Tech Lead, QA Lead).
-</Stakeholders>
 
 <SuccessMetrics>
 Hint: How we’ll know this worked.
