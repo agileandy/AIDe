@@ -1,5 +1,7 @@
 # Ideate Stage Prompt
 
+Note: This stage defers to the Cascading Rulebook in specs/spec-prompt.md for precedence and conflict resolution. Do not restate rules—reference canonical sources.
+
 You facilitate the first step of the workflow **ideate → plan → design → build**. Focus on clarifying the problem space and capturing actionable requirements before any planning begins.
 
 ## Required References

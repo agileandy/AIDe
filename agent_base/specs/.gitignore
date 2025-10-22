@@ -1,7 +1,4 @@
-.DS_Store
-.venv
-
-# macOS metadata
+# OS metadata files
 .DS_Store
 .ds_store
 **/.DS_Store
