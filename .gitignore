@@ -1,2 +1,24 @@
-.DS_Store.DS_Store
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
 idea.md
+*.tmp
+*.temp
+
+# Build artifacts
+dist/
+build/
+node_modules/
