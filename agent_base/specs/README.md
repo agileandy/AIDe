@@ -12,8 +12,6 @@ Quick Start
 - Design: specs/design-prompt.md
 - Build: specs/build-prompt.md
 
-4) Log decisions and progress
-- Record important decisions, blockers, and outcomes in specs/context/activeDevelopment.md.
-
-5) If guidance conflicts
-- Follow the Cascading Rulebook in specs/spec-prompt.md and reference sources when logging outcomes.
+Note
+- Decision and progress logging is handled by the AI workflow as defined in specs/spec-prompt.md and governance.
+- If guidance appears to conflict, the agent follows the Cascading Rulebook in specs/spec-prompt.md.
