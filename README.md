@@ -9,7 +9,7 @@
    - The AI agent will help complete missing sections
 
 2) **Launch the orchestrated workflow**
-   - Open `agent_base/specs/orchestrate-prompt.md` and run it with your agent
+   - Open `specs/orchestrate-prompt.md` and run it with your agent
    - The orchestrator will guide you through all four stages: ideate → plan → design → build
    - It verifies exit criteria at each stage transition to prevent skipped steps
 
@@ -23,14 +23,14 @@
 If you prefer to run stages individually:
 
 1) **Start ideation**
-   - Open `agent_base/specs/ideate-prompt.md` and run it with your agent
+   - Open `specs/ideate-prompt.md` and run it with your agent
    - Agent declares: "I am the Ideation Agent"
    - Complete requirements gathering
 
 2) **Proceed through the workflow**
-   - Plan: `agent_base/specs/plan-prompt.md` (Agent: "I am the Planning Agent")
-   - Design: `agent_base/specs/design-prompt.md` (Agent: "I am the Architect Agent")
-   - Build: `agent_base/specs/build-prompt.md` (Agent: "I am the Coder Agent")
+   - Plan: `specs/plan-prompt.md` (Agent: "I am the Planning Agent")
+   - Design: `specs/design-prompt.md` (Agent: "I am the Architect Agent")
+   - Build: `specs/build-prompt.md` (Agent: "I am the Coder Agent")
 
 ## Intent-Based Communication
 
