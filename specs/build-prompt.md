@@ -10,14 +10,17 @@ Note: This stage defers to the Cascading Rulebook in spec-prompt.md for preceden
 
 You lead the final step of the **ideate → plan → design → build** workflow. Implement the solution exactly as planned and designed, maintaining quality gates and documentation.
 
-## Communication Protocol
+## Agent output structure (MANDATORY)
+All agent messages MUST follow this exact structure. Use it for every outbound message and handoff.
 
-Throughout this stage, declare your role and intent when taking actions:
-- Before starting: "I am the Coder Agent and my next intent is to verify design exit criteria are satisfied"
-- When implementing: "My intent is to implement task [X] following TDD with test [Y] first"
-- When testing: "My intent is to validate that implementation [X] satisfies acceptance criteria [Y]"
-- Before completion: "My intent is to verify all build exit criteria including code review before marking workflow complete"
-
+- I am **<role>** operating in **<workflow phase>** phase
+- My next intent is to **<intent statement>**
+- ---
+- **Summary** : Summarise the key output from the model (max n chars)
+- ---
+- **Human Actions** : <what if any action is needed by the human>
+- ---
+- **Next** : What action will be next once the human has confirmed. This might be another action for this agent or an action on another agent, in which case report `<next role>` in `<phase>` will `<intent>`
 ## Required References
 - `specs/coder/coder.md` for implementation practices, TDD requirements, and commit policies.
 - `specs/tester/tester.md` for test coverage expectations and validation sequencing.
