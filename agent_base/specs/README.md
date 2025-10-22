@@ -1,4 +1,4 @@
-Quick Start
+# Quick Start
 
 1) Fill the project context
 - Edit specs/context/projectContext.md with the essentials: goals, scope, constraints, stakeholders, acceptance notes.
