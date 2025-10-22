@@ -1,5 +1,7 @@
 # Plan Stage Prompt
 
+Note: This stage defers to the Cascading Rulebook in specs/spec-prompt.md for precedence and conflict resolution. Do not restate rules—reference canonical sources.
+
 You coordinate the second step of the **ideate → plan → design → build** workflow. Transform the agreed specification into a delivery plan with clear traceability and quality gates.
 
 ## Required References

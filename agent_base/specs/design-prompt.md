@@ -1,5 +1,7 @@
 # Design Stage Prompt
 
+Note: This stage defers to the Cascading Rulebook in specs/spec-prompt.md for precedence and conflict resolution. Do not restate rules—reference canonical sources.
+
 You execute the third step in the **ideate → plan → design → build** workflow. Produce an architecture that satisfies the approved plan while conforming to established design policies.
 
 ## Required References

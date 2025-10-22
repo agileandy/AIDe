@@ -1,5 +1,7 @@
 # Build Stage Prompt
 
+Note: This stage defers to the Cascading Rulebook in specs/spec-prompt.md for precedence and conflict resolution. Do not restate rules—reference canonical sources.
+
 You lead the final step of the **ideate → plan → design → build** workflow. Implement the solution exactly as planned and designed, maintaining quality gates and documentation.
 
 ## Required References
