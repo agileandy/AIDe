@@ -1,40 +1,10 @@
-<Instructions>
-- Follow all sections precisely to create a solution that meets the objective.
-- The Cascading Rulebook defines precedence and conflict resolution. Always apply it when sources disagree.
-- The Context section lists editable files, languages, and key constraints.
-- The Tasks section enumerates activities. Keep traceability to Context and Objective.
-- Any custom instructions are defined in Blocks.
-</Instructions>
+<StartHere>
+User action: Fill out the Project Context section below before running the workflow (ideate → plan → design → build).
+Everything after Project Context is primarily for the AI to read and follow.
+</StartHere>
 
-<Launch>
-This file is the canonical launch script for the agentic workflow. Treat all sections as the source of truth for objectives, scope, and constraints at kickoff.
-
-Required References (do not duplicate content; reference these as sources of truth):
-- specs/context/projectContext.md (project vision, goals, scope, rationale)
-- specs/context/systemDesign.md (architecture and design decisions)
-- specs/context/activeDevelopment.md (delivery log, progress, decisions)
-- specs/orchestrator/orchestrator.md and specs/orchestrator/workflow.md (governance, sequencing, quality gates)
-- specs/architect/architect.md, specs/coder/coder.md, specs/tester/tester.md (role responsibilities)
-</Launch>
-
-<Cascading Rulebook>
-Order of precedence (highest wins on conflicts):
-1. This spec (objectives, tasks, explicit constraints)
-2. specs/context/projectContext.md (requirements and rationale)
-3. specs/orchestrator/orchestrator.md and specs/orchestrator/workflow.md (governance and sequencing)
-4. specs/context/systemDesign.md (architecture and technical decisions)
-5. Role guides: specs/architect/architect.md, specs/coder/coder.md, specs/tester/tester.md
-6. Stage prompts: specs/ideate-prompt.md, specs/plan-prompt.md, specs/design-prompt.md, specs/build-prompt.md
-7. Miscellaneous materials
-
-Conflict resolution protocol:
-- First, align to the higher-precedence source.
-- Then, document the decision and references in specs/context/activeDevelopment.md.
-- If unresolved or impacts scope/quality gates, escalate per Orchestrator rules and capture the outcome in the log.
-
-Governance note:
-- Stage prompts and role guides must not restate rules that exist here or in governance documents. They should reference the canonical sources above.
-</Cascading Rulebook>
+<ProjectContext>
+# You fill this section first
 
 <Name>
 
@@ -72,6 +42,37 @@ Governance note:
 4. Task 4:
 *(End of tasks)*
 </Tasks>
+</ProjectContext>
+
+<Launch>
+This file is the canonical launch script for the agentic workflow. Treat all sections as the source of truth for objectives, scope, and constraints at kickoff.
+
+Required References (do not duplicate content; reference these as sources of truth):
+- specs/context/projectContext.md (project vision, goals, scope, rationale)
+- specs/context/systemDesign.md (architecture and design decisions)
+- specs/context/activeDevelopment.md (delivery log, progress, decisions)
+- specs/orchestrator/orchestrator.md and specs/orchestrator/workflow.md (governance, sequencing, quality gates)
+- specs/architect/architect.md, specs/coder/coder.md, specs/tester/tester.md (role responsibilities)
+</Launch>
+
+<Cascading Rulebook>
+Order of precedence (highest wins on conflicts):
+1. This spec (objectives, tasks, explicit constraints)
+2. specs/context/projectContext.md (requirements and rationale)
+3. specs/orchestrator/orchestrator.md and specs/orchestrator/workflow.md (governance and sequencing)
+4. specs/context/systemDesign.md (architecture and technical decisions)
+5. Role guides: specs/architect/architect.md, specs/coder/coder.md, specs/tester/tester.md
+6. Stage prompts: specs/ideate-prompt.md, specs/plan-prompt.md, specs/design-prompt.md, specs/build-prompt.md
+7. Miscellaneous materials
+
+Conflict resolution protocol:
+- First, align to the higher-precedence source.
+- Then, document the decision and references in specs/context/activeDevelopment.md.
+- If unresolved or impacts scope/quality gates, escalate per Orchestrator rules and capture the outcome in the log.
+
+Governance note:
+- Stage prompts and role guides must not restate rules that exist here or in governance documents. They should reference the canonical sources above.
+</Cascading Rulebook>
 
 <Blocks>
 **technical constraints**:
@@ -88,3 +89,11 @@ Governance note:
 
 Note: Constraints in this section supersede role preferences but do not override governance (orchestrator/workflow) or higher-precedence sources in the Rulebook.
 </Blocks>
+
+<Instructions>
+- Follow all sections precisely to create a solution that meets the objective.
+- The Cascading Rulebook defines precedence and conflict resolution. Always apply it when sources disagree.
+- The Context section lists editable files, languages, and key constraints.
+- The Tasks section enumerates activities. Keep traceability to Context and Objective.
+- Any custom instructions are defined in Blocks.
+</Instructions>
