@@ -1,3 +1,7 @@
+# AIDe - AI Development Framework
+
+> **Note**: If you're here to clean up old branches, see [BRANCH_CLEANUP.md](BRANCH_CLEANUP.md) for instructions.
+
 # Quick Start
 
 ## Orchestrated Workflow (Recommended)
