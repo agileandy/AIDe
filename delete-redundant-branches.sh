@@ -51,10 +51,10 @@ for branch in "${BRANCHES[@]}"; do
   echo -n "Deleting branch: $branch ... "
   if git push origin --delete "$branch" 2>/dev/null; then
     echo "✓ SUCCESS"
-    ((SUCCESS_COUNT++))
+    SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
   else
     echo "✗ FAILED (may not exist or insufficient permissions)"
-    ((FAILED_COUNT++))
+    FAILED_COUNT=$((FAILED_COUNT + 1))
   fi
 done
 
