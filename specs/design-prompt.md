@@ -21,6 +21,8 @@ All agent messages MUST follow this exact structure. Use it for every outbound m
 - ---
 - **Human Actions** : <what if any action is needed by the human>
 - ---
+- **Discussion (optional)** : Use for design critiques, risk trade-offs, or evidence defending reuse. Cite specific sections of `systemDesign.md`, `projectContext.md`, or prior logs when making claims.
+- ---
 - **Next** : What action will be next once the human has confirmed. This might be another action for this agent or an action on another agent, in which case report `<next role>` in `<phase>` will `<intent>`
 ## Required References
 - `specs/architect/architect.md` for architectural responsibilities, constraints, and mandatory behaviors.
@@ -38,25 +40,29 @@ All agent messages MUST follow this exact structure. Use it for every outbound m
 **INTENT**: Execute design workflow with clear intent declarations
 
 1. **Intent**: Verify preconditions and understand planned tasks
-   - Confirm plan stage exit criteria are met in `specs/context/activeDevelopment.md`
-   - Review planned tasks and acceptance criteria
-   - Ensure no unresolved planning blockers assigned to design stage
-   - Declare: "My intent is to verify that plan stage completed successfully before beginning architectural design"
+    - Confirm plan stage exit criteria are met in `specs/context/activeDevelopment.md`
+    - Review planned tasks and acceptance criteria
+    - Ensure no unresolved planning blockers assigned to design stage
+    - Declare: "My intent is to verify that plan stage completed successfully before beginning architectural design"
+    - If any planning `FOLLOW-UP:` item references design, resolve it or document why it persists with a mitigation timeline.
 
 2. **Intent**: Create architectural views following C4 model
-   - Translate planned tasks into architectural views per `specs/architect/architect.md` and `specs/architect/c4Design.md`
-   - Start with Context level, then proceed to Container, Component as needed
-   - Declare: "My intent is to create a C4 [level] diagram in systemDesign.md that addresses [specific planned tasks]"
+    - Translate planned tasks into architectural views per `specs/architect/architect.md` and `specs/architect/c4Design.md`
+    - Start with Context level, then proceed to Container, Component as needed
+    - Declare: "My intent is to create a C4 [level] diagram in systemDesign.md that addresses [specific planned tasks]"
+    - When proposing reuse of existing components, cite the exact section in `systemDesign.md` or repository reference that proves availability.
 
 3. **Intent**: Document technical decisions and design rationale
-   - Update `specs/context/systemDesign.md` with required C4 layers, technology decisions, and observability strategies
-   - Preserve existing historical context; do not remove prior content
-   - Declare: "My intent is to document the architectural decision for [component/pattern] with rationale in systemDesign.md"
+    - Update `specs/context/systemDesign.md` with required C4 layers, technology decisions, and observability strategies
+    - Preserve existing historical context; do not remove prior content
+    - Declare: "My intent is to document the architectural decision for [component/pattern] with rationale in systemDesign.md"
+    - Append an "Implementation Ready Checklist" subsection summarizing prerequisites (migrations, feature flags, configs) so build stage can prepare in parallel once provisionally cleared.
 
 4. **Intent**: Provide implementation guidance
-   - Log design decisions, open questions, and implementation guidance in `specs/context/activeDevelopment.md`
-   - Reference the relevant sections of `specs/context/systemDesign.md`
-   - Declare: "My intent is to provide implementation guidance for [task X] referencing systemDesign.md section [Y]"
+    - Log design decisions, open questions, and implementation guidance in `specs/context/activeDevelopment.md`
+    - Reference the relevant sections of `specs/context/systemDesign.md`
+    - Declare: "My intent is to provide implementation guidance for [task X] referencing systemDesign.md section [Y]"
+    - Label unresolved items with `FOLLOW-UP:` and assign an owner or due stage to avoid lingering ambiguity.
 
 5. **Intent**: Validate alignment and prepare handoff
    - Verify design aligns with requirements in `specs/context/projectContext.md`
@@ -66,5 +72,6 @@ All agent messages MUST follow this exact structure. Use it for every outbound m
 
 ## Exit Criteria
 - `specs/context/systemDesign.md` reflects a complete, review-ready architecture aligned with project requirements.
-- `specs/context/activeDevelopment.md` captures design rationale, integration notes, and any implementation caveats for the **build** stage.
-- All raised issues or dependencies are clearly tagged for follow-up before coding begins.
+- `specs/context/activeDevelopment.md` captures design rationale, integration notes, and any implementation caveats for the **build** stage, including references to the Implementation Ready Checklist.
+- All raised issues or dependencies are clearly tagged for follow-up before coding begins, with owners or due stages recorded.
+- Any provisional guidance intended for parallel tester or coder preparation is explicitly labelled and linked to the authoritative design sections.
